@@ -1,0 +1,38 @@
+﻿<div layout="column" ng-cloak>
+    <md-content layout-padding>
+        <form name="form.servicerequest" novalidate>
+            <md-content>
+                <md-input-container class="md-block">
+                    <label>Name:</label>
+                    <input ng-model="user.Name">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Mobile:</label>
+                    <input ng-model="user.mobile" type="email">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Email</label>
+                    <input ng-model="user.email" type="email">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Address:</label>
+                    <input ng-model="user.address" type="email">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Brand</label>
+                    <md-select ng-model="user.SelectedQuery">
+                        <md-option ng-repeat="_query in Querys" ng-value="_query">
+                            {{ _query.Name }}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+
+            </md-content>
+
+        </form>
+    </md-content>
+</div>

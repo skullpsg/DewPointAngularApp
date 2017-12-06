@@ -1,0 +1,12 @@
+﻿<div class="wrapper">
+    <form class="form-signin">
+        <h2 class="form-signin-heading">Please login</h2>
+        <input type="text" class="form-control" name="username" ng-model="email" placeholder="Email Address" required="" autofocus="" />
+        <input type="password" class="form-control" name="password" ng-model="pwd" placeholder="Password" required="" />
+        <label class="checkbox">
+            <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+        </label>
+        <a class="btn btn-lg btn-primary btn-block" ng-click="login()">Login</a>
+        <p class="help-block" ng-show="loginFailure">Email ID and Password Incorrect</p>
+    </form>
+</div>

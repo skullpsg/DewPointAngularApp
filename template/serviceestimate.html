@@ -1,0 +1,35 @@
+﻿
+<div layout="column" ng-cloak>
+    <md-content layout-padding>
+        <form name="form.serviceestimate" novalidate>
+            <md-input-container>
+                <label>Brand</label>
+                <md-select ng-model="product.SelectedServiceType">
+                    <md-option ng-repeat="_brand in ServiceTypes" ng-value="_brand">
+                        {{ _brand.Name }}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container>
+                <label>Tonnages</label>
+                <md-select ng-model="product.SelectedTonnage">
+                    <md-option ng-repeat="_tonnage in Tonnages" ng-value="_tonnage">
+                        {{ _tonnage.Name }}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>No of Unit</label>
+                <div class="custome-number-input">
+                    <input type="number" min="1" max="100" name="Credit" ng-init="product.noofunit=1;" ng-model="product.noofunit" customeinputnum required />
+                </div>
+            </md-input-container>
+
+            Estimate:{{product.SelectedServiceType.value* product.SelectedTonnage.value *product.noofunit }}
+
+
+        </form>
+    </md-content>
+</div>
